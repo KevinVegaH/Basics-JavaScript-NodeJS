@@ -2,8 +2,22 @@
 const fs = require('fs'); // <-- ya existe y en node.
 //const fs = require('express'); // <-- no es nativo de node.
 //const fs = require('../s'); // <-- son archivos que nosotros mismos escribimos y estan en alguna parte del proyecto.
+const colors = require('colors/safe');
 
-let crearArchivo = (base) => {
+let listarTabla = (base, limite = 10) => {
+
+    console.log('========================'.green);
+    console.log(` TABLA DE ${base} `.yellow);
+    console.log('========================'.green);
+
+    for (let i = 0; i <= limite; i++) {
+
+        console.log(`${base} * ${i} = ${base * i}\n`);
+    }
+
+}
+
+let crearArchivo = (base, limite = 10) => {
 
     return new Promise((resolve, reject) => {
 
@@ -14,7 +28,7 @@ let crearArchivo = (base) => {
 
         let data = '';
 
-        for (let i = 0; i <= 10; i++) {
+        for (let i = 0; i <= limite; i++) {
 
             data += `${base} * ${i} = ${base * i}\n`;
         }
@@ -23,7 +37,7 @@ let crearArchivo = (base) => {
         fs.writeFile(`tablas/tabla-${base}.txt`, data, (err) => {
             if (err) reject(err)
             else
-                resolve(`tabla-${base}.txt`)
+                resolve(colors.green(`tabla-${base}.txt`))
 
         });
 
@@ -35,5 +49,6 @@ let crearArchivo = (base) => {
 
 
 module.exports = {
-    crearArchivo
+    crearArchivo,
+    listarTabla
 }
