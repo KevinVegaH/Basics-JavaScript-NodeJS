@@ -1,0 +1,5 @@
+body {
+    overflow: hidden;
+    /* oculta los scrollbar */
+    margin: 0%;
+}
