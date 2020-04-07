@@ -1,0 +1,19 @@
+{
+  "name": "basics-javascript-nodejs",
+  "version": "1.0.0",
+  "description": "03-base-node es una aplicación para generar archivos de tablas de multiplicar.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/KevinVegaH/Basics-JavaScript-NodeJS.git"
+  },
+  "author": "Kevin A. Vega H",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/KevinVegaH/Basics-JavaScript-NodeJS/issues"
+  },
+  "homepage": "https://github.com/KevinVegaH/Basics-JavaScript-NodeJS#readme"
+}
